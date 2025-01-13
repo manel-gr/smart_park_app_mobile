@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SmartParkTN"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".OnboardingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity
+            android:name=".CreateAccountActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity
+            android:name=".EmailVerificationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+
+        <activity
+            android:name=".PasswordCreationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity
+            android:name=".EmailSignUpActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+
+        <activity android:name=".AccountCreatedActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginWithEmailActivity" />
+        <activity android:name=".ResetPasswordActivity" />
+        <activity android:name=".PasswordWasResetActivity" />
+        <activity android:name=".HomeActivity" />
+
+        <activity
+            android:name=".MyCarsActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".AddCarActivity"
+            android:exported="false"/>
+
+
+        <activity
+            android:name=".CarMapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HelpActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SabotActivity"
+            android:exported="false" />
+        <activity android:name=".GarageActivity" android:exported="false" />
+        <activity android:name=".GarageChatActivity" android:exported="false" />
+        <activity android:name=".GarageCallActivity" android:exported="false" />
+        <activity android:name=".GarageTrackingActivity" android:exported="false" />
+        <activity
+            android:name=".ParkingActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".ParkingLotDetailActivity"
+            android:exported="false"/>
+
+
+        <activity
+            android:name=".OrderDetailActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".BookingDetailsActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".SubscriptionActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".PaymentMethodActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".AddCardActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".SubscriptionDetailsActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".DirectionsActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".TimerActivity"
+            android:exported="false"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCjUgGySYoos2UeHYmd6-MpIDLno2Sy2Ps"/>
+    </application>
+
+</manifest>
+

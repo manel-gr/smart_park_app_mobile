@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="password_weak">#FFE53935</color>
+    <color name="password_medium">#FFFDD835</color>
+    <color name="password_strong">#FF43A047</color>
+    <color name="purple_light">#7E3FF2</color>
+    <color name="purple">#6400CD</color>
+
+    <color name="available_spot">#4CAF50</color>
+    <color name="unavailable_spot">#F44336</color>
+    <color name="blue">#2196F3</color>
+    <color name="gray">#909090</color>
+
+
+
+</resources>

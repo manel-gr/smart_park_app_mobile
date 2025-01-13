@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Smart Park TN</string>
+    <string-array name="countries_array">
+        <item>Tunisia</item>
+        <item>Algeria</item>
+        <item>Morocco</item>
+        <item>Libya</item>
+        <item>Egypt</item>
+        <!-- Add more countries as needed -->
+    </string-array>
+    <string name="add_new_car">Add New Car</string>
+    <string name="car_name">Car Name</string>
+    <string name="license_plate">License Plate</string>
+    <string name="country">Country</string>
+    <string name="green_license_plate">Green License Plate</string>
+    <string name="save_car">Save Car</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="main_title">Do you need a parking\nspace for your car?</string>
+    <string name="visited_parks_title">Your most visited car parks</string>
+    <string name="menu_button_description">Open menu</string>
+    <string name="notification_button_description">View notifications</string>
+    <string name="location_icon_description">Location icon</string>
+    <string name="location_address">2655 Rue de la...</string>
+    <string name="location_name">Laval Universi</string>
+    <string name="promotion_title">Shell Cars</string>
+    <string name="promotion_description">50% promotion</string>
+    <string name="view_more">View more</string>
+</resources>
