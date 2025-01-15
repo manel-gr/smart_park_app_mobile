@@ -11,13 +11,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import java.util.ArrayList;
 import java.util.List;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
-public class ParkingActivity extends AppCompatActivity implements ParkingLotAdapter.OnParkingLotClickListener {
+public class ParkingActivity extends AppCompatActivity implements OnMapReadyCallback, ParkingLotAdapter.OnParkingLotClickListener {
     private EditText searchInput;
     private RecyclerView parkingLotsRecyclerView;
     private View bottomSheet;
     private BottomSheetBehavior bottomSheetBehavior;
     private ParkingLotAdapter parkingLotAdapter;
+    private GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +54,11 @@ public class ParkingActivity extends AppCompatActivity implements ParkingLotAdap
         searchInput.setOnClickListener(v -> {
             bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
         });
+
+        // Initialize map
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.mapContainer);
+        mapFragment.getMapAsync(this);
     }
 
     private void loadSampleParkingLots() {
@@ -62,6 +74,16 @@ public class ParkingActivity extends AppCompatActivity implements ParkingLotAdap
         Intent intent = new Intent(this, ParkingLotDetailActivity.class);
         intent.putExtra("parking_lot_name", parkingLot.getName());
         startActivity(intent);
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+        // Add a marker in Tunisia and move the camera
+        LatLng tunisia = new LatLng(36.8065, 10.1815);
+        mMap.addMarker(new MarkerOptions().position(tunisia).title("Marker in Tunisia"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(tunisia, 10));
     }
 }
 

@@ -53,7 +53,11 @@ public class MyCarsActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        backButton.setOnClickListener(v -> finish());
+        backButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MyCarsActivity.this, HomeActivity.class);
+            startActivity(intent);
+            finish(); // Facultatif : termine l'activité actuelle pour qu'elle ne reste pas dans la pile
+        });
 
         // Load cars from Firebase
         loadCars();

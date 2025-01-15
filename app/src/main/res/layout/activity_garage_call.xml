@@ -47,12 +47,60 @@
         android:layout_height="0dp"
         android:layout_weight="1"/>
 
-    <ImageButton
-        android:id="@+id/endCallButton"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginBottom="32dp"
-        android:src="@drawable/ic_call_end"
-        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <!-- Mute Button -->
+        <ImageButton
+            android:id="@+id/muteButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_mic_off" />
+        <Space
+            android:layout_width="2dp"
+            android:layout_height="2dp"/>
+        <!-- Camera Button -->
+        <ImageButton
+            android:id="@+id/speakerButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_volume_up" />
+        <Space
+            android:layout_width="2dp"
+            android:layout_height="2dp"/>
+        <ImageButton
+            android:id="@+id/endCallButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:src="@drawable/call"
+            android:background="@color/white"
+            />
+        <Space
+            android:layout_width="2dp"
+            android:layout_height="2dp"/>
+        <ImageButton
+            android:id="@+id/cameraButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_videocam_off" />
+
+
+
+        <!-- Speaker Button -->
+    </LinearLayout>
+
+    <!-- End Call Button -->
+
 </LinearLayout>
 

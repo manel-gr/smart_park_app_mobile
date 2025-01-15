@@ -32,6 +32,8 @@
             android:layout_height="48dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_call"
+
+
             />
     </LinearLayout>
 
@@ -63,6 +65,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:src="@drawable/send"
+            android:background="@color/white"
             />
     </LinearLayout>
 </LinearLayout>

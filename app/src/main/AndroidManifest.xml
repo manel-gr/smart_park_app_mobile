@@ -79,7 +79,8 @@
         <activity
             android:name=".ParkingLotDetailActivity"
             android:exported="false"/>
-
+<activity android:name=".CarFoundActivity"
+    android:exported="false"/>
 
         <activity
             android:name=".OrderDetailActivity"

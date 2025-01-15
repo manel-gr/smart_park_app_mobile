@@ -53,7 +53,11 @@ public class SabotActivity extends AppCompatActivity {
             startActivity(new Intent(SabotActivity.this, MyCarsActivity.class));
         });
 
-        backButton.setOnClickListener(v -> finish());
+        backButton.setOnClickListener(v -> {
+            Intent intent = new Intent(SabotActivity.this, HelpActivity.class);
+            startActivity(intent);
+            finish(); // Facultatif : termine l'activité actuelle si vous ne voulez pas qu'elle reste dans la pile
+        });
     }
 
     private void loadDefaultCar() {

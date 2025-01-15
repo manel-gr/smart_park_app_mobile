@@ -15,7 +15,11 @@
     <color name="unavailable_spot">#F44336</color>
     <color name="blue">#2196F3</color>
     <color name="gray">#909090</color>
+    <color name="weak">#FF0000</color> <!-- Rouge pour faible -->
+    <color name="medium">#FFA500</color> <!-- Orange pour moyen -->
+    <color name="strong">#008000</color>
 
+    <color name="blue_500">#2196F3</color>
 
 
 </resources>

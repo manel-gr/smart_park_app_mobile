@@ -1,5 +1,6 @@
 package com.example.smartparktn;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -19,6 +20,8 @@ public class CarMapActivity extends AppCompatActivity implements OnMapReadyCallb
     private ImageButton backButton;
     private TextView addressText;
     private TextView timeText;
+    private Button foundCarButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,12 @@ public class CarMapActivity extends AppCompatActivity implements OnMapReadyCallb
         backButton = findViewById(R.id.backButton);
         addressText = findViewById(R.id.addressText);
         timeText = findViewById(R.id.timeText);
+        foundCarButton = findViewById(R.id.foundCarButton);
+
+        foundCarButton.setOnClickListener(v -> {
+            Intent intent = new Intent(CarMapActivity.this, CarFoundActivity.class);
+            startActivity(intent);
+        });
 
         // Setup map
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()

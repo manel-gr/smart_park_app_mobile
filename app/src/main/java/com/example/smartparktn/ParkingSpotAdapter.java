@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,6 +53,12 @@ public class ParkingSpotAdapter extends RecyclerView.Adapter<ParkingSpotAdapter.
     public void onBindViewHolder(@NonNull ParkingSpotViewHolder holder, int position) {
         ParkingSpot spot = spots.get(position);
         holder.bind(spot);
+
+        if (spot == selectedSpot) {
+            holder.carIcon.setColorFilter(ContextCompat.getColor(holder.itemView.getContext(), R.color.blue_500));
+        } else {
+            holder.carIcon.setColorFilter(null);
+        }
     }
 
     @Override

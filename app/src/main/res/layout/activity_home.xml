@@ -17,16 +17,15 @@
             android:layout_height="wrap_content"
             android:padding="25dp">
 
-            <!-- Menu Button -->
+            <!-- Logout Button -->
             <ImageButton
-                android:id="@+id/menuButton"
+                android:id="@+id/logoutButton"
                 android:layout_width="40dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_menu"
+                android:src="@drawable/ic_logout"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                 />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <!-- Profile Button -->
             <ImageButton
@@ -50,7 +49,7 @@
                 android:layout_marginTop="26dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/menuButton" />
+                app:layout_constraintTop_toBottomOf="@id/logoutButton" />
 
             <!-- Location Card -->
             <com.google.android.material.card.MaterialCardView
@@ -72,13 +71,10 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-
                         android:src="@drawable/img5" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
-
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.appbar.AppBarLayout>
@@ -110,9 +106,7 @@
                 android:id="@+id/parkingRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-
-            />
+                android:layout_marginTop="16dp" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
@@ -126,10 +120,5 @@
         android:background="@color/white"
         app:menu="@menu/bottom_nav_menu" />
 
-
-
-
-
-
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+

@@ -81,7 +81,15 @@
                     android:text="7 minutes"
                     android:textColor="@color/purple_500"
                     android:layout_marginStart="8dp"/>
+
             </LinearLayout>
+            <Button
+                android:id="@+id/foundCarButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Car founded"
+                android:textColor="@color/white" />
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -12,6 +12,7 @@
         android:orientation="vertical">
 
         <RelativeLayout
+            android:id="@+id/headerLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp">
@@ -38,11 +39,13 @@
                 android:drawablePadding="8dp"/>
         </RelativeLayout>
 
-        <FrameLayout
+        <fragment
             android:id="@+id/mapContainer"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#E1E1E1"/>
+            android:layout_below="@id/headerLayout"
+            android:layout_above="@id/bottomSheet"/>
 
     </LinearLayout>
 

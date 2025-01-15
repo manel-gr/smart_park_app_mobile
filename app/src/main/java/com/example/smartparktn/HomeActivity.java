@@ -17,7 +17,7 @@ public class HomeActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
     private RecyclerView parkingRecyclerView;
     private ParkingAdapter parkingAdapter;
-    private ImageButton menuButton;
+    private ImageButton logoutButton;
     private ImageButton profileButton;
     private TextView locationText;
 
@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
         // Initialize views
         bottomNavigationView = findViewById(R.id.bottomNavigation);
         parkingRecyclerView = findViewById(R.id.parkingRecyclerView);
-        menuButton = findViewById(R.id.menuButton);
+        logoutButton = findViewById(R.id.logoutButton);
         profileButton = findViewById(R.id.profileButton);
 
         // Setup RecyclerView
@@ -39,8 +39,10 @@ public class HomeActivity extends AppCompatActivity {
         setupBottomNavigation();
 
         // Setup click listeners
-        menuButton.setOnClickListener(v -> {
-            // Handle menu click
+        logoutButton.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+            startActivity(intent);
+
         });
 
         profileButton.setOnClickListener(v -> {
@@ -73,7 +75,7 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             } else if (itemId == R.id.navigation_subscriptions) {
-                Intent intent = new Intent(HomeActivity.this, PaymentMethodActivity.class);
+                Intent intent = new Intent(HomeActivity.this, SubscriptionActivity.class);
                 startActivity(intent);
                 return true;
             }

@@ -76,8 +76,13 @@ public class ParkingLotDetailActivity extends AppCompatActivity implements Parki
 
     @Override
     public void onSpotClick(ParkingSpot spot) {
-        bookButton.setEnabled(true);
-        priceText.setText("5 DNT / 4 hours");
+        if (spot.isAvailable()) {
+            bookButton.setEnabled(true);
+            priceText.setText("5 DNT / 4 hours");
+            spotAdapter.setSelectedSpot(spot);
+        } else {
+            Toast.makeText(this, "This spot is not available", Toast.LENGTH_SHORT).show();
+        }
     }
 }
 
